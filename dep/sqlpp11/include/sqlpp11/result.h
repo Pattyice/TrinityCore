@@ -117,6 +117,11 @@ namespace sqlpp
     {
       _result.next(_result_row);
     }
+
+    size_t size() const
+    {
+      return _result.size();
+    }
   };
 }
 
