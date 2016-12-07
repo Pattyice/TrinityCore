@@ -2,7 +2,7 @@ diff --git a/dep/sqlpp11/include/sqlpp11/result.h b/dep/sqlpp11/include/sqlpp11/
 index 527a6e0..09de19f 100644
 --- a/dep/sqlpp11/include/sqlpp11/result.h
 +++ b/dep/sqlpp11/include/sqlpp11/result.h
-@@ -117,6 +117,11 @@ namespace sqlpp
+@@ -117,6 +117,16 @@ namespace sqlpp
      {
        _result.next(_result_row);
      }
@@ -10,6 +10,11 @@ index 527a6e0..09de19f 100644
 +    size_t size() const
 +    {
 +      return _result.size();
++    }
++
++    operator bool() const
++    {
++      return !empty();
 +    }
    };
  }

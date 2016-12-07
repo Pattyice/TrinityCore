@@ -122,6 +122,11 @@ namespace sqlpp
     {
       return _result.size();
     }
+
+    operator bool() const
+    {
+      return !empty();
+    }
   };
 }
 
